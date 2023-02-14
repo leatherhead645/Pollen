@@ -18,7 +18,7 @@ echo "# Fixed a tiny little bug - r58Playz           #"
 echo "+##############################################+"
 
 mkdir -p /tmp/overlay/etc/opt/chrome/policies/managed
-echo '{"URLBlocklist": [], "SystemFeaturesDisableList": [], "ChromeOsMultiProfileUserBehavior": "unrestricted", "DeveloperToolsAvailability": 1, "AllowDeletingBrowserHistory": true, "IncognitoModeAvailability": 0, "AllowScreenLock": true, "ExtensionAllowedTypes": null, "ExtensionInstallAllowlist": null, "ExtensionInstallBlocklist": null, "ExtensionInstallForcelist": null, "ExtensionSettings": null}' > /tmp/overlay/etc/opt/chrome/policies/managed/policy.json
+echo '{"URLBlocklist": [], "DisableSafeBrowsingProceedAnyway": false, "ChromeOsMultiProfileUserBehavior": "unrestricted", "DeveloperToolsAvailability": 1, "AllowDeletingBrowserHistory": true, "IncognitoModeAvailability": 0, "WallpaperImage": null, "AllowScreenLock": true, "ExtensionAllowedTypes": null, "ExtensionInstallAllowlist": null, "ExtensionInstallBlocklist": null, "ForceGoogleSafeSearch": false, "ChromeOsLockOnIdleSuspend": false, "HomepageLocation": chrome://newtab, "ForceYouTubeRestrict": 0, "ExtensionSettings": null}' > /tmp/overlay/etc/opt/chrome/policies/managed/policy.json
 cp -a -L /etc/* /tmp/overlay/etc 2> /dev/null
 mount --bind /tmp/overlay/etc /etc
 
