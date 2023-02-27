@@ -18,7 +18,7 @@ echo "# Fixed a tiny little bug - r58Playz           #"
 echo "+##############################################+"
 
 mkdir -p /tmp/overlay/etc/opt/chrome/policies/managed
-echo '{"URLBlocklist": [], "SystemFeaturesDisableList": [], "ChromeOsMultiProfileUserBehavior": "unrestricted", "DeveloperToolsAvailability": 1, "AllowDeletingBrowserHistory": true, "IncognitoModeAvailability": 0, "DisableSafeBrowsingProceedAnyway": false, "AllowScreenLock": true, "ForceGoogleSafeSearch": false, "ChromeOsLockOnIdleSuspend": false, "SecondaryGoogleAccountSigninAllowed": true, "ExtensionInstallForcelist": ["ajfeopllhblhddbeiioflapdpghjpeek;https://goguardian.com/licenses/update.php","haldlgldplgnggkjaafhelgiaglafanh;https://goguardian.com/ext/m.xml"], "SafeSitesFilterBehavior": 0, "ForceYouTubeRestrict": 0, "ExtensionAllowedTypes": null, "ExtensionInstallAllowlist": null, "ExtensionInstallBlocklist": null, "ExtensionSettings": null}' > /tmp/overlay/etc/opt/chrome/policies/managed/policy.json
+echo '{"URLBlocklist": [], "SystemFeaturesDisableList": [], "ChromeOsMultiProfileUserBehavior": "unrestricted", "DeveloperToolsAvailability": 1, "AllowDeletingBrowserHistory": true, "IncognitoModeAvailability": 0, "DisableSafeBrowsingProceedAnyway": false, "AllowScreenLock": true, "ForceGoogleSafeSearch": false, "ChromeOsLockOnIdleSuspend": false, "SecondaryGoogleAccountSigninAllowed": true, "ExtensionInstallForcelist": null, "SafeSitesFilterBehavior": 0, "ForceYouTubeRestrict": 0, "ExtensionAllowedTypes": null, "ExtensionInstallAllowlist": null, "ExtensionInstallBlocklist": null, "ExtensionSettings": null}' > /tmp/overlay/etc/opt/chrome/policies/managed/policy.json
 cp -a -L /etc/* /tmp/overlay/etc 2> /dev/null
 mount --bind /tmp/overlay/etc /etc
 
